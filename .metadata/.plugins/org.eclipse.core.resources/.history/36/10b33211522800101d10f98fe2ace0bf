@@ -1,0 +1,47 @@
+package services;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.List;
+import java.util.stream.Collectors;
+
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import entities.Train;
+
+public class TrainService {
+	private List<Train> trainList;
+	private Train train;
+	ObjectMapper mapper=new ObjectMapper();
+	public TrainService() {
+		loadTrains();
+	}
+	public TrainService(Train train) {
+		this.train=train;
+		loadTrains();
+	}
+	public void loadTrains() {
+		File trains=new File("D:\\Project\\Personal\\ticketbooking\\src\\main\\java\\localdb\\users.json");
+		try {
+			trainList=mapper.readValue(trains, new TypeReference<List<Train>>(){});
+		} catch (IOException e) {
+		System.out.println("Error in loading trains");
+			e.printStackTrace();
+		}
+	}
+	public  List<Train> searchTrains(String source, String destination) {
+		return trainList.stream().filter(train->isValid(train,source,destination)).collect(Collectors.toList());
+	}
+
+	public boolean isValid(Train train, String source, String destination) {
+		System.out.println("source {}" + source);
+		System.out.println("destination {}" + destination);
+		List<String> stations = train.getStations();
+		System.out.println("stations {}" + stations);
+		int sourceIndex = stations.indexOf(source);
+		int destinationIndex=stations.indexOf(destination);
+		return sourceIndex!=-1 && destinationIndex !=-1 && sourceIndex<destinationIndex;
+	}
+
+}

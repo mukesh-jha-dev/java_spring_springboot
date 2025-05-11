@@ -1,0 +1,30 @@
+package towinterfacewithsamedwfaultmethod;
+
+public class Main implements A,B {
+	int a=30;
+
+	@Override
+	public void print() {
+		System.out.println("print from Main Class");
+		
+	}
+	
+	public static void mainMethod() {
+		System.out.println("static main method ...from the main class...");
+	}
+
+	@Override
+	public void deafaultMethod() {
+		A.super.deafaultMethod();
+	}
+	public static void main(String[] args) {
+		B a=new Main();
+		a.print();
+		a.deafaultMethod();
+		A.staticMethod();
+		Main m=null;
+		m.mainMethod();
+		System.out.println(a.a);
+	}
+
+}

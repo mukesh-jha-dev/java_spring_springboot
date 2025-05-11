@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Alice",
+    "userId": "alice123",
+    "password": "1234",
+    "hashPassword": "hashed1234",
+    "ticketBooked": [
+      {
+        "ticketId": "T1",
+        "train": {
+          "trainId": "132",
+          "trainNo": "345678",
+          "seats": [[0,0,0],[0,0,0]],
+          "stationTime": {
+            "Bangalore": "13:50:00",
+            "Delhi": "16:20:00"
+          },
+          "stations": ["Bangalore", "Delhi"]
+        },
+        "from": "Bangalore",
+        "to": "Delhi",
+        "seatNo": 4
+      }
+    ]
+  }
+]

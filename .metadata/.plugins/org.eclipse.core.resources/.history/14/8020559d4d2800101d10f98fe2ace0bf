@@ -1,0 +1,25 @@
+package services;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+import entities.Train;
+
+public class TrainService {
+	private  List<Train> trainList;
+	
+	public TrainService(private List<Train> trainList) {
+		this.trainList=trainList;
+	}
+
+	public  List<Train> searchTrains(String source, String dest) {
+		return trainList.filter(train->isValid(train,source,destination)).collect(Collectors.toList());
+	}
+	public boolean isValid(Train train.String source,String destination) {
+		List<Train> stationList=train.getStations();
+		int sourceIndex=stationList.indexOf(source);
+		int destinationIndex=stationList.indexOf(deatination);
+		return sourceIndex!=-1 && destinationIndex !=-1  sourceIndex<destinationIndex;
+	}
+
+}

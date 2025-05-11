@@ -1,0 +1,9 @@
+package mapoemployee;
+
+import java.util.HashMap;
+
+public class Main {
+public static void main(String[] args) {
+	Map<Employee,Employee> map=new HashMap<Employee, Employee>();
+}
+}

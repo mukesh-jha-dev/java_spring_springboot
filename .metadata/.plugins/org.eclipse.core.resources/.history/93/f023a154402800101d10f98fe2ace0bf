@@ -1,0 +1,61 @@
+package com.example.ticketbooking;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
+import java.util.UUID;
+
+import entities.User;
+import services.UserBookingService;
+import utils.UserServiceUtil;
+
+public class App {
+  public static void main(String[] args) throws IOException  {
+    System.out.println("Running Train Booking System!.....");
+   System.out.println(new File("localdb/users.json").getPath());
+    Scanner sc=new Scanner(System.in);
+    int option=0;
+    UserBookingService userBookingService = null;
+    try {
+		userBookingService=new UserBookingService();
+	} catch (IOException e) {
+		System.err.println("SomeThing went wrong while loading the user");
+		e.printStackTrace();
+	}
+    while(option!=7) {
+		System.out.println("Choose Opion!");
+		System.out.println("1.Sign Up");
+		System.out.println("2.Log In");
+		System.out.println("3.Fetch Booking");
+		System.out.println("4.Search Train");
+		System.out.println("5.Book a seat");
+		System.out.println("6.Cancel My Booking");
+		System.out.println("7.Exit the App");
+		option = sc.nextInt();
+		switch (option) {
+		case 1:
+			System.out.println("Enter the username to Signup");
+			String userName = sc.next();
+			System.out.println("Enter the password");
+			String password = sc.next();
+			User user = new User(userName, UUID.randomUUID().toString(), password,
+					UserServiceUtil.hashPassword(password), new ArrayList<>());
+			userBookingService.signUp(user);
+			break;
+		case 2:
+			System.out.println("Enter the username to login");
+			String userNameToLogIn = sc.next();
+			System.out.println("Enter the password");
+			String passwordToLogIn = sc.next();
+			User userToLogIn = new User(userNameToLogIn, UUID.randomUUID().toString(), passwordToLogIn,
+					UserServiceUtil.hashPassword(passwordToLogIn), new ArrayList<>());
+			userBookingService = new UserBookingService(userToLogIn);
+			break;
+
+		default:
+			break;
+		}
+    }
+  }
+}

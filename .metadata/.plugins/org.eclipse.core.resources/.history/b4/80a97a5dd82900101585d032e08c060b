@@ -1,0 +1,13 @@
+package towinterfacewithsamedwfaultmethod;
+
+public interface B {
+	int b=20;
+	void print();
+	default void deafaultMethod() {
+		System.out.println("I am Default Method from B");
+	}
+	static void staticMethod() {
+		System.out.println("I am Static Method from B");
+	}
+
+}

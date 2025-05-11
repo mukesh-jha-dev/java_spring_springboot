@@ -1,0 +1,74 @@
+[
+	{
+		"name": "Mukesh",
+		"userId": "abcdef",
+		"password": "12345",
+		"hashPassword": "123456",
+		"ticketBooked": [
+			{
+				"ticketId": "231",
+				"userId": null,
+				"source": "Delhi",
+				"destination": "Punjab",
+				"dateOfTravel": 1754677800000,
+				"train": {
+					"trainId": "132",
+					"trainNo": "345678",
+					"seats": [
+						[
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						]
+					],
+					"stationTime": {
+						"Bangalore": "13:50:00",
+						"Delhi": "13:50:00",
+						"Punjab": "13:50:00"
+					},
+					"stations": [
+						"Bangalore",
+						"Delhi",
+						"Punjab"
+					],
+					"trainInfo": "TrainId:132 Train No:345678"
+				},
+				"ticketInfo": "Ticket Id:231 belongs to User:null from Delhi to Punjab on Sat Aug 09 00:00:00 IST 2025"
+			}
+		]
+	},
+	{
+		"name": "mukesh",
+		"userId": "e2d5620b-a9f2-4c8e-8898-37f56320e27e",
+		"password": "4019",
+		"hashPassword": "$2a$10$AiZSTgWQS6grKqrLa3.kVeIVcctv5QXltnFboRk9nB0Dx2CO/FPiu",
+		"ticketBooked": []
+	}
+]
