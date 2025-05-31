@@ -1,0 +1,32 @@
+🟢 Easy Problems:
+Two Sum - https://leetcode.com/problems/two-sum/
+Best Time to Buy and Sell Stock - https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+Remove Duplicates from Sorted Array - https://leetcode.com/problems/remove-duplicates-from-sorted-array/
+Merge Sorted Array - https://leetcode.com/problems/merge-sorted-array/
+Maximum Subarray - https://leetcode.com/problems/maximum-subarray/
+Move Zeroes - https://leetcode.com/problems/move-zeroes/
+Valid Mountain Array - https://leetcode.com/problems/valid-mountain-array/
+Find Numbers with Even Number of Digits - https://leetcode.com/problems/find-numbers-with-even-number-of-digits/
+Squares of a Sorted Array - https://leetcode.com/problems/squares-of-a-sorted-array/
+
+🟡 Medium Problems:
+3Sum - https://leetcode.com/problems/3sum/
+Container With Most Water - https://leetcode.com/problems/container-with-most-water/
+Product of Array Except Self - https://leetcode.com/problems/product-of-array-except-self/
+Subarray Sum Equals K - https://leetcode.com/problems/subarray-sum-equals-k/
+Set Matrix Zeroes - https://leetcode.com/problems/set-matrix-zeroes/
+Spiral Matrix - https://leetcode.com/problems/spiral-matrix/
+Rotate Image - https://leetcode.com/problems/rotate-image/
+Find the Duplicate Number - https://leetcode.com/problems/find-the-duplicate-number/
+Longest Consecutive Sequence - https://leetcode.com/problems/longest-consecutive-sequence/
+Kth Largest Element in an Array - https://leetcode.com/problems/kth-largest-element-in-an-array/
+
+🔴 Hard Problems:
+Trapping Rain Water - https://leetcode.com/problems/trapping-rain-water/
+Merge k Sorted Lists - https://leetcode.com/problems/merge-k-sorted-lists/
+First Missing Positive - https://leetcode.com/problems/first-missing-positive/
+Median of Two Sorted Arrays - https://leetcode.com/problems/median-of-two-sorted-arrays/
+Sliding Window Maximum - https://leetcode.com/problems/sliding-window-maximum/
+Longest Increasing Path in a Matrix - https://leetcode.com/problems/longest-increasing-path-in-a-matrix/
+Maximum Product Subarray - https://leetcode.com/problems/maximum-product-subarray/
+Maximum Gap - https://leetcode.com/problems/maximum-gap/
