@@ -1,4 +1,7 @@
 package array;
+
+import java.util.Arrays;
+
 /*
 You are given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n, representing the number of elements 
 in nums1 and nums2 respectively.
@@ -31,5 +34,32 @@ nums2.length == n
 Follow up: Can you come up with an algorithm that runs in O(m + n) time?
  */
 public class MergeSortedArray {
+	public static int[] mergeTwoSortedArray(int arr1[],int m,int[]arr2, int n) {
+		int arr1LastIndex=m-1;
+		int arr2LastIndex=n-1;
+		int finalIndex=m+n-1;
+		while(arr1LastIndex>=0 &&arr2LastIndex>=0) {
+			if(arr1[arr1LastIndex]>=arr2[arr2LastIndex]) {
+				arr1[finalIndex--]=arr1[arr1LastIndex];
+				arr1LastIndex--;
+			}else {
+				arr1[finalIndex--]=arr2[arr2LastIndex];
+				arr2LastIndex--;
+			}
+		}
+		while(arr2LastIndex>=0){
+            arr1[finalIndex--]=arr2[arr2LastIndex--];
+        }
+		return arr1;
+	}
+	public static void main(String[] args) {
+		int arr1[]= {1,2,3,0,0,0};
+		int m=3;
+		int arr2[]= {2,5,6};
+		int n=3;
+		int[] mergeTwoSortedArray = mergeTwoSortedArray(arr1,3,arr2,3);
+		System.out.println(Arrays.toString(mergeTwoSortedArray));
+		
+	}
 
 }
